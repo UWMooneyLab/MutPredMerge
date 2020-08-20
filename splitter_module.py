@@ -27,7 +27,7 @@ def processing_exonic_variant_function(path, output, suffix, threads):
         split_missense[i].to_csv(output + "/%s.missense_%s.exonic_variant_function" % (suffix, i), sep="\t", header=False, index=False)
 
 
-    indels = data[data[1].isin(["nonframeshift substitution","nonframeshift deletion","nonframeshift insertion"])]
+    """indels = data[data[1].isin(["nonframeshift substitution","nonframeshift deletion","nonframeshift insertion"])]
     if test_num:
         indels = indels.head(test_num)
     split_indels = pd.np.array_split(indels, threads)
@@ -40,7 +40,7 @@ def processing_exonic_variant_function(path, output, suffix, threads):
         LOF = LOF.head(test_num)
     split_LOF = pd.np.array_split(LOF, threads)
     for i in range(threads):
-        split_LOF[i].to_csv(output + "/%s.LOF_%s.exonic_variant_function" % (suffix, i), sep="\t", header=False, index=False)
+        split_LOF[i].to_csv(output + "/%s.LOF_%s.exonic_variant_function" % (suffix, i), sep="\t", header=False, index=False)"""
 
 
 if __name__ == "__main__":

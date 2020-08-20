@@ -16,7 +16,7 @@ BASE    = "small_sample"
 
 
 # wildcars
-VARTYPES = ["missense", "LOF", "indels"]
+VARTYPES = ["missense"]#, "LOF", "indels"]
 ALL_THREADS = [num for num in range(config["num_threads"])]
 NUM_THREADS = max(ALL_THREADS) + 1
 
